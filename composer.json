@@ -1,6 +1,6 @@
 {
-    "name": "govcms-extras/parse-composer",
-    "description": "Components used to parse package information for GovCMS distribution.",
+    "name": "govcms-extras/package",
+    "description": "Generates Drush make files for drupal.org's ancient packaging system.",
     "type": "composer-plugin",
     "license": "MIT",
     "authors": [
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "GovCMS\\Extras\\ParseComposer\\": "src/"
+            "GovCMS\\Extras\\Package\\": "src/"
         }
     },
     "config": {

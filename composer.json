@@ -26,7 +26,7 @@
         "sort-packages": true
     },
     "scripts": {
-        "cs": "phpcs --standard=PSR2 -n src"
+        "phpcs": "phpcs --standard=PSR2 -n src"
     },
     "minimum-stability": "dev"
 }

@@ -1,0 +1,32 @@
+{
+    "name": "govcms-extras/parse-composer",
+    "description": "Components used to parse package information for GovCMS distribution.",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joseph Z",
+            "email": "pandaski@outlook.com.au"
+        }
+    ],
+    "require": {
+        "composer-plugin-api": "^1.1"
+    },
+    "require-dev": {
+        "composer/composer": "dev-master",
+        "squizlabs/php_codesniffer": "^3.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "GovCMS\\Extras\\ParseComposer\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "cs": "phpcs --standard=PSR2 -n src"
+    },
+    "minimum-stability": "dev"
+}

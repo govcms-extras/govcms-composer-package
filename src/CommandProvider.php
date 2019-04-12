@@ -1,6 +1,6 @@
 <?php
 
-namespace GovCMS\Extras\ParseComposer;
+namespace GovCMS\Extras\Package;
 
 use Composer\Plugin\Capability\CommandProvider as CommandProviderCapability;
 
@@ -15,7 +15,7 @@ class CommandProvider implements CommandProviderCapability
     public function getCommands()
     {
         return [
-            new ParseComposerCommand(),
+            new Package(),
         ];
     }
 }

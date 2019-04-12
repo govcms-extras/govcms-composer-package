@@ -9,16 +9,8 @@
             "email": "pandaski@outlook.com.au"
         }
     ],
-    "repositories": [
-        {
-            "type": "path",
-            "version": "dev-master",
-            "url": "/Users/pandaski/Sites/govcms-composer/package"
-        }
-    ],
     "require": {
-        "composer-plugin-api": "^1.1",
-        "govcms-composer/package": "dev-master"
+        "composer-plugin-api": "^1.1"
     },
     "require-dev": {
         "composer/composer": "dev-master",
@@ -40,7 +32,7 @@
         "class": "GovCMS\\Composer\\Package\\Plugin"
     },
     "scripts": {
-        "phpcs": "phpcs --standard=PSR2 -n src"
+        "cs": "phpcs --standard=PSR2 -n src"
     },
     "minimum-stability": "dev"
 }

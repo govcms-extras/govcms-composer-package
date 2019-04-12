@@ -18,7 +18,7 @@ class Package extends BaseCommand
     {
         parent::configure();
         $this
-            ->setName('govcms:extras:package')
+            ->setName('govcms:package')
             ->setDescription('Generates Drush make files for drupal.org\'s ancient packaging system.');
     }
 

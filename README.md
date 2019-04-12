@@ -1,2 +1,2 @@
-# parse-composer
-Components used to parse package information for GovCMS distribution.
+# govcms-composer/package
+Generates Drush make files for drupal.org's ancient packaging system.

@@ -21,6 +21,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface, Capable
 {
     protected $composer;
     protected $io;
+    protected $handler;
 
     /**
      * {@inheritdoc}
@@ -29,6 +30,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface, Capable
     {
         $this->composer = $composer;
         $this->io = $io;
+        $this->handler = new Handler($composer, $io);
     }
 
     /**
@@ -49,5 +51,16 @@ class Plugin implements PluginInterface, EventSubscriberInterface, Capable
         return [
             PackageEvents::POST_PACKAGE_UPDATE => 'postPackage',
         ];
+    }
+
+    /**
+     * Post package event behaviour.
+     *
+     * @param PackageEvent $event
+     * @return void
+     */
+    public function postPackage(PackageEvent $event)
+    {
+        $this->handler->onPostPackageEvent($event);
     }
 }

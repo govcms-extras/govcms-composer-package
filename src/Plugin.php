@@ -22,22 +22,35 @@ class Plugin implements PluginInterface, EventSubscriberInterface, Capable
     protected $composer;
     protected $io;
 
-   /**
-    * {@inheritdoc}
-    */
+    /**
+     * {@inheritdoc}
+     */
     public function activate(Composer $composer, IOInterface $io)
     {
         $this->composer = $composer;
         $this->io = $io;
     }
 
-   /**
-    * {@inheritdoc}
-    */
+    /**
+     * {@inheritdoc}
+     */
     public function getCapabilities()
     {
         return array(
             'Composer\Plugin\Capability\CommandProvider' => 'GovCMS\Composer\Package\CommandProvider',
         );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getSubscribedEvents()
+    {
+        return [
+            PackageEvents::POST_PACKAGE_INSTALL => 'postPackage',
+            PackageEvents::POST_PACKAGE_UPDATE => 'postPackage',
+            ScriptEvents::POST_UPDATE_CMD => 'postCmd',
+            PluginEvents::COMMAND => 'cmdBegins',
+        ];
     }
 }

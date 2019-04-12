@@ -1,6 +1,6 @@
 <?php
 
-namespace GovCMS\Extras\Package;
+namespace GovCMS\Composer\Package;
 
 use Composer\Command\BaseCommand;
 use Symfony\Component\Console\Input\InputInterface;

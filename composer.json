@@ -1,5 +1,5 @@
 {
-    "name": "govcms-extras/package",
+    "name": "govcms-composer/package",
     "description": "Generates Drush make files for drupal.org's ancient packaging system.",
     "type": "composer-plugin",
     "license": "MIT",
@@ -9,8 +9,16 @@
             "email": "pandaski@outlook.com.au"
         }
     ],
+    "repositories": [
+        {
+            "type": "path",
+            "version": "dev-master",
+            "url": "/Users/pandaski/Sites/govcms-composer/package"
+        }
+    ],
     "require": {
-        "composer-plugin-api": "^1.1"
+        "composer-plugin-api": "^1.1",
+        "govcms-composer/package": "dev-master"
     },
     "require-dev": {
         "composer/composer": "dev-master",
@@ -18,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "GovCMS\\Extras\\Package\\": "src/"
+            "GovCMS\\Composer\\Package\\": "src/"
         }
     },
     "config": {
@@ -29,7 +37,7 @@
         "branch-alias": {
             "dev-master": "1.x-dev"
         },
-        "class": "GovCMS\\Extras\\Package\\Plugin"
+        "class": "GovCMS\\Composer\\Package\\Plugin"
     },
     "scripts": {
         "phpcs": "phpcs --standard=PSR2 -n src"

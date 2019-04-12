@@ -1,6 +1,6 @@
 <?php
 
-namespace GovCMS\Extras\Package;
+namespace GovCMS\Composer\Package;
 
 use Composer\Plugin\Capability\CommandProvider as CommandProviderCapability;
 

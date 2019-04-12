@@ -1,6 +1,6 @@
 <?php
 
-namespace GovCMS\Extras\Package;
+namespace GovCMS\Composer\Package;
 
 use Composer\Script\Event;
 use Composer\Plugin\CommandEvent;
@@ -37,7 +37,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface, Capable
     public function getCapabilities()
     {
         return array(
-            'Composer\Plugin\Capability\CommandProvider' => 'GovCMS\Extras\Package\CommandProvider',
+            'Composer\Plugin\Capability\CommandProvider' => 'GovCMS\Composer\Package\CommandProvider',
         );
     }
 }
